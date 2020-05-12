@@ -1,0 +1,261 @@
+@charset "utf-8";
+body, button, h1, h2, h3, h4, h5, h6, html, img, input, li, ol, p, textarea, ul {
+    padding: 0;
+    margin: 0;
+    word-break: break-all;
+}
+
+body, html, ul, li, div, p, span {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}    /* 使用webkit内核的浏览器 */
+:-moz-placeholder{
+    color: #fff;
+}                  /* Firefox版本4-18 */
+::-moz-placeholder{
+    color: #fff;
+}                  /* Firefox版本19+ */
+:-ms-input-placeholder{
+    color: #fff;
+}           /* IE浏览器 */
+li, ol, ul {
+    list-style: none
+}
+
+i {
+    font-style: inherit
+}
+
+html, body {
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", Helvetica, "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    background: #f8f8f8;
+    .iconfont {
+        font-size: 1em;
+    }
+}
+.cursor-pointer{
+ cursor: pointer!important;
+}
+#app {
+    width: 10rem;
+		margin: 0 auto;
+		font-size: 14px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.f-l {
+    float: left
+}
+
+.f-r {
+    float: right
+}
+
+.t-c {
+    text-align: center
+}
+
+.t-r {
+    text-align: right
+}
+
+.t-l {
+    text-align: left
+}
+
+.f-w{
+    font-weight: bold;
+}
+
+.f-w-n {
+    font-weight: normal;
+}
+
+button, input, textarea {
+    border: none;
+    outline: none
+}
+
+@for $i from 1 through 100 {
+    .w-#{10 * $i} {
+        width: (10px * $i) !important
+    }
+    .h-#{10 * $i} {
+        height: (10px * $i) !important
+    }
+    .f-#{1 + $i} {
+        font-size: #{1 + $i}px !important
+    }
+}
+.f-10 {
+    font-size: 12px;
+    transform: scale(.8);
+    transform-origin: center;
+}
+
+@for $i from 1 through 20 {
+    .m-#{5 * $i} {
+        margin: (5px * $i)
+    }
+    .m-l-#{5 * $i} {
+        margin-left: (5px * $i)
+    }
+    .m-r-#{5 * $i} {
+        margin-right: (5px * $i)
+    }
+    .m-t-#{5 * $i} {
+        margin-top: (5px * $i)
+    }
+    .m-b-#{5 * $i} {
+        margin-bottom: (5px * $i)
+    }
+    .p-#{5 * $i} {
+        padding: (5px * $i)
+    }
+    .p-l-#{5 * $i} {
+        padding-left: (5px * $i)
+    }
+    .p-r-#{5 * $i} {
+        padding-right: (5px * $i)
+    }
+    .p-t-#{5 * $i} {
+        padding-top: (5px * $i)
+    }
+    .p-b-#{5 * $i} {
+        padding-bottom: (5px * $i)
+    }
+    .t-i-#{5 * $i} {
+        text-indent: (5px * $i)
+    }
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    &.r-reverse {
+        flex-direction: row-reverse
+    }
+    // 左右布局 反方向
+    &.c-reverse {
+        flex-direction: column-reverse
+    }
+    // 上下布局 反方向$peop
+    &.column {
+        flex-direction: column
+    }
+    // 居左
+    &.start {
+        justify-content: flex-start
+    }
+    // 居右
+    &.end {
+        justify-content: flex-end
+    }
+    // 居中
+    &.around {
+        justify-content: space-around
+    }
+    // 居中
+    &.center {
+        justify-content: center
+    }
+    // 居中 容器之间有空白
+    &.between {
+        justify-content: space-between
+    }
+    // 居中 容器左右有空白
+    &.evenly {
+        justify-content: space-evenly
+    }
+    // 允许换行
+    &.wrap {
+        flex-wrap: wrap
+    }
+    &.align-start {
+        align-items: start;
+    }
+    // 超出换行
+    > .c-start {
+        align-self: start
+    }
+    // 父集align-items不生效 改为start
+    > .x-flex-a {
+        flex: auto;
+        width: 10px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch
+    }
+    > .x-auto {
+        flex: auto
+    }
+}
+
+// 背景色
+.bg-fff {
+    background: #fff
+}
+
+// 字体颜色
+.c-fff {
+    color: #fff
+}
+
+.hidden {
+    display: none
+}
+
+.textcut {
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    //word-break: break-all
+}
+
+.textcut2 {
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    overflow: hidden !important;;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+}
+.textcut3 {
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    overflow: hidden !important;;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    word-break: break-all;
+}
+.textcut4 {
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    overflow: hidden !important;;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4;
+    word-break: break-all;
+}
+.textcut5 {
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    overflow: hidden !important;;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 5;
+    word-break: break-all;
+}
